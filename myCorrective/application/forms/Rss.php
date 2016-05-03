@@ -7,7 +7,7 @@ class Application_Form_Rss extends Zend_Form
     {
         $this->setMethod('post');
 
-=        $rName = new Zend_Form_Element_Text("rName");
+        $rName = new Zend_Form_Element_Text("rName");
         $rName->setRequired();
         $rName->setlabel("Rss Name:");
         $rName->setAttrib("class",array("form-control","col-lg-9" ));

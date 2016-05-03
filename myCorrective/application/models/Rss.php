@@ -32,15 +32,6 @@ class Application_Model_Rss extends Zend_Db_Table_Abstract
 		return $this->find($rssid)->toArray();
 	}
 
-    
-
-	
-
-    function getRssPerUser($uid,$rssid){
-        
-         }
-    
-
 
 	function deleteRss($rssid){
 		return $this->delete('id='.$rssid);
