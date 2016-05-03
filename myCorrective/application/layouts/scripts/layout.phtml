@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+    <title>Rss Corrective</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">My Corrective</a>
+        </div>
+
+        <?php $auth = Zend_Auth::getInstance();
+        if($auth -> hasIdentity()){
+            $userObj = $auth->getIdentity();
+
+        ?>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="<?php echo $this ->baseUrl();?>/rss/add">Add New</a></li>
+                <li><a href="<?php echo $this ->baseUrl(); ?>/user/logout">Logout</a></li>
+            </ul>
+        </div>
+<?php }?>
+
+    </div>
+</nav>
+
+
+
+<?php echo $this->layout()->content; ?>
+
+
+<footer class="container-fluid bg-4 text-center">
+    <p>Bootstrap Theme Made By <a href="http://www.MohammedAli.com">www.MohammedAli.com</a></p>
+</footer>
+
+</body>
+</html>
